@@ -9,53 +9,84 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: whitesmoke;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    font-family: Arial, sans-serif;
 }
 
 .wrapper {
     position: relative;
     width: 100%;
     max-width: 400px;
+    padding: 20px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.wrapper:hover {
+    transform: translateY(-5px);
 }
 
 h2 {
-    font-size: 2em;
+    font-size: 2.5em;
     color: #e94d58;
-    margin: 15px 0;
+    margin: 20px 0;
+    font-weight: bold;
+    letter-spacing: 1.5px;
 }
 
 .gif {
     width: 100%;
-    max-width: 300px;
+    max-width: 280px;
+    border-radius: 15px;
+    margin: 15px 0;
+    transition: transform 0.3s ease;
+}
+
+.gif:hover {
+    transform: scale(1.05);
 }
 
 .btn-group {
-    margin-top: 50px;
-    position: relative;
-    height: 40px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
 }
 
 button {
-    width: 150px;
-    height: inherit;
-    color: white;
+    flex: 1;
+    padding: 10px 20px;
     font-size: 1.2em;
+    font-weight: bold;
     border-radius: 30px;
-    outline: none;
+    border: none;
     cursor: pointer;
-    box-shadow: 0 2px 4px gray;
-    border: 2px solid #e94d58;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 button.yes-btn {
     background: #e94d58;
+    color: white;
+}
+
+button.yes-btn:hover {
+    background: #d03b46;
 }
 
 button.no-btn {
     background: white;
     color: #e94d58;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    border: 2px solid #e94d58;
+}
+
+button.no-btn:hover {
+    background: #f7f7f7;
+    color: #c63b43;
 }
